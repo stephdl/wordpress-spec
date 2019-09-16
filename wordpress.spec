@@ -14,10 +14,11 @@
 
 Summary:    Blog tool and publishing platform
 URL:        http://www.wordpress.org
-Name:       wordpress
+Name:       wordpress-AutoUpdater
 Version:    %{upstream_version}%{?upstream_prever:~%upstream_lower}
 Release:    1%{?dist}
 License:    GPLv2
+Obsoletes:  wordpress
 
 Source0:    https://wordpress.org/%{name}-%{upstream_version}%{?upstream_prever:-%{upstream_prever}}.tar.gz
 Source1:    wordpress-httpd-conf
