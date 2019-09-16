@@ -16,7 +16,6 @@ Name:       wordpress-AutoUpdater
 Version:    %{upstream_version}%{?upstream_prever:~%upstream_lower}
 Release:    1%{?dist}
 License:    GPLv2
-Obsoletes:  wordpress
 
 Source0:    https://wordpress.org/wordpress-%{upstream_version}.tar.gz
 Source1:    wordpress-httpd-conf
