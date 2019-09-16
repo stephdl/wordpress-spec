@@ -18,7 +18,7 @@ Release:    1%{?dist}
 License:    GPLv2
 Obsoletes:  wordpress
 
-Source0:    https://wordpress.org/%{name}-%{upstream_version}.tar.gz
+Source0:    https://wordpress.org/wordpress-%{upstream_version}.tar.gz
 Source1:    wordpress-httpd-conf
 Source2:    README.fedora.wordpress
 Source3:    README.fedora.wordpress-mu
