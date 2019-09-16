@@ -9,8 +9,6 @@
 %global wp_content %{_datadir}/wordpress/wp-content
 
 %global upstream_version 5.2.3
-#global upstream_prever  RC1
-#global upstream_lower   rc1
 
 Summary:    Blog tool and publishing platform
 URL:        http://www.wordpress.org
@@ -20,11 +18,10 @@ Release:    1%{?dist}
 License:    GPLv2
 Obsoletes:  wordpress
 
-Source0:    https://wordpress.org/%{name}-%{upstream_version}%{?upstream_prever:-%{upstream_prever}}.tar.gz
+Source0:    https://wordpress.org/%{name}-%{upstream_version}.tar.gz
 Source1:    wordpress-httpd-conf
 Source2:    README.fedora.wordpress
 Source3:    README.fedora.wordpress-mu
-Source4:    wordpress-nginx-conf
 # To minify JS assets
 Source5:    wordpress-minify.php
 
@@ -153,9 +150,6 @@ rm -f ${RPM_BUILD_ROOT}%{_datadir}/wordpress/{license.txt,readme.html}
 
 %files
 %config(noreplace) %{_sysconfdir}/httpd/conf.d/wordpress.conf
-%if %{with_nginx}
-%config(noreplace) %{_sysconfdir}/nginx/default.d/wordpress.conf
-%endif
 %dir %attr(750,apache,apache) %{_datadir}/wordpress
 %attr(750,apache,apache) %{_datadir}/wordpress/wp-admin
 %attr(750,apache,apache) %{_datadir}/wordpress/wp-includes
