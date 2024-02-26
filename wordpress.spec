@@ -8,7 +8,7 @@
 %{!?_pkgdocdir: %global _pkgdocdir %{_docdir}/%{name}-%{version}}
 %global wp_content %{_datadir}/wordpress/wp-content
 
-%global upstream_version 5.2.3
+%global upstream_version 6.4.3
 
 Summary:    Blog tool and publishing platform
 URL:        http://www.wordpress.org
@@ -173,6 +173,9 @@ rm -f ${RPM_BUILD_ROOT}%{_datadir}/wordpress/{license.txt,readme.html}
 
 
 %changelog
+* Sun Feb 25 2024 Stephane de Labrusse <stephdl@de-labrusse.fr>
+- Release version 6.4.3
+
 * Sun Sep 15 2019 Stephane de Labrusse <stephdl@de-labrusse.fr>
 - no more version now, wordpress will auto update
 * Thu Sep  5 2019 Remi Collet <remi@remirepo.net> - 5.2.3-1
